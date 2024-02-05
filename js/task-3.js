@@ -1,7 +1,8 @@
 function checkForSpam(message) {
     const spam = ['spam', 'sale'];
+    const lowerMessage = message.toLowerCase();
     for (let i = 0; i < spam.length; i++) {
-        if (message.toLowerCase().indexOf(spam[i]) !== -1) {
+        if (lowerMessage.indexOf(spam[i]) !== -1) {
             return true;
         }
     }
